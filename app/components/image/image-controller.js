@@ -1,13 +1,11 @@
 function ImageController() {
 	var is = new ImageService()
 
-	function drawImage() {
-		is.getImage();
-		return getImage
+	function drawImage(image) {
+		var imageElem = document.getElementById('body');
+		imageElem.style.cssText = `background: url("${image.url}") background-size: cover; no-repeat; center`
 	}
-
-drawImage()
-
+	is.getImage(drawImage)
 }
 
 
