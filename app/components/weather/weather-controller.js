@@ -12,6 +12,6 @@ function WeatherController() {
 		var k = 0
 		var c = K - 273.15
 	}
-	
+
 
 }
