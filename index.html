@@ -2,13 +2,17 @@
 
 <head>
 	<meta charset="UTF-8">
-	<title>Inspire</title>
+	<title>Inspired.Get</title>
 	<link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body id="body">
+	<div class="clock">
+		<iframe src="assets/SVGDigitalClock.svg" width="300" height="200"> </iframe>
+	</div>
 	<div id="weather">
-		Your Weather Template
+		<a class="weatherwidget-io" href="https://forecast7.com/en/43d62n116d24/garden-city/?unit=us" data-label_1="GARDEN CITY"
+		 data-label_2="FORECAST" data-theme="original">GARDEN CITY FORECAST</a>
 	</div>
 
 	<div id="quote">
@@ -23,6 +27,9 @@
 
 
 
+		<script>
+			!function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = "https://weatherwidget.io/js/widget.min.js"; fjs.parentNode.insertBefore(js, fjs); } }(document, "script", "weatherwidget-io-js");
+		</script>
 	<!--JS Libraries-->
 	<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 	<!--Services-->
