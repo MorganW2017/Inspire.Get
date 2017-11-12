@@ -2,8 +2,9 @@ function ImageController() {
 	var is = new ImageService()
 
 	function drawImage(image) {
+		console.log(image)
 		var imageElem = document.getElementById('body');
-		imageElem.style.cssText = `background: url("${image.url}") background-size: cover; no-repeat; center`
+		document.body.style.backgroundImage = `url("${image.url}")`
 	}
 	is.getImage(drawImage)
 }

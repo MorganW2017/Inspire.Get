@@ -1,11 +1,10 @@
 function WeatherController() {
-	var wc = this;
-	var weatherService = new WeatherService();
+	var ws = new WeatherService();
 
-	weatherService.getWeather(function (weather) {
-		console.log(weather);
-		//What can you do with this weather object?
-	})
+	function drawWeather(weather)
+	console.log(weather);
+	var weatherElem = document.getElementById('weather');
+	ws.getWeather(drawWeather)
 
 	function convertTemp(weather) {
 		var f = ((K - 273.15) * 1.8) + 32
