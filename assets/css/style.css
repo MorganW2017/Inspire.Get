@@ -5,14 +5,15 @@
   justify-content: center;
   margin: 0px;
   padding: 0px;
-  }
+}
 #body{
   background-size: cover; 
   background-repeat: no-repeat; 
   background-position: center;
-  }
+}
 #quote{
-color: green;
+color: red;
+align-self: auto;
 }
 #weather{
   color: red;
