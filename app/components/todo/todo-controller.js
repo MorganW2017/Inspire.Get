@@ -13,7 +13,7 @@ function TodoController() {
 		//FYI DONT EDIT ME :)
 		todoService.getTodos(draw)
 	}
-	var toDoElem = document.getElementById('todo');
+	var todoElem = document.getElementById('todo');
 
 	function draw(todos) {
 		//WHAT IS MY PURPOSE?
@@ -24,6 +24,7 @@ function TodoController() {
 			var todo = todo[i];
 
 		}
+		todoElem.innerHTML = template
 	}
 
 	this.addTodoFromForm = function addTodoFromForm(e) {
@@ -34,24 +35,24 @@ function TodoController() {
 		todosFormElem.classList.toggle('hidden', true)
 		// DONT FORGET TO BUILD YOUR TODO OBJECT
 
-	//PASSES THE NEW TODO TO YOUR SERVICE
-	//DON'T FORGET TO REDRAW THE SCREEN WITH THE NEW TODO
-	//YOU SHOULDN'T NEED TO CHANGE THIS
-	todoService.addTodo(todo, getTodos)
-	//^^^^^^^ EXAMPLE OF HOW TO GET YOUR TOODOS AFTER AN EDIT
-}
+		//PASSES THE NEW TODO TO YOUR SERVICE
+		//DON'T FORGET TO REDRAW THE SCREEN WITH THE NEW TODO
+		//YOU SHOULDN'T NEED TO CHANGE THIS
+		todoService.addTodo(todo, getTodos)
+		//^^^^^^^ EXAMPLE OF HOW TO GET YOUR TOODOS AFTER AN EDIT
+	}
 
-this.toggleTodoStatus = function (todoId) {
-	// asks the service to edit the todo status
-	todoService.toggleTodoStatus(todoId, getTodos)
-	// YEP THATS IT FOR ME
-}
+	this.toggleTodoStatus = function (todoId) {
+		// asks the service to edit the todo status
+		todoService.toggleTodoStatus(todoId, getTodos)
+		// YEP THATS IT FOR ME
+	}
 
-this.removeTodo = function (todoId) {
-	// ask the service to run the remove todo with this id
+	this.removeTodo = function (todoId) {
+		// ask the service to run the remove todo with this id
 
-	// ^^^^ THIS LINE OF CODE PROBABLY LOOKS VERY SIMILAR TO THE toggleTodoStatus
-}
+		// ^^^^ THIS LINE OF CODE PROBABLY LOOKS VERY SIMILAR TO THE toggleTodoStatus
+	}
 
 	// IF YOU WANT YOUR TODO LIST TO DRAW WHEN THE PAGE FIRST LOADS WHAT SHOULD YOU CALL HERE???
 
