@@ -3,6 +3,7 @@ function TodoService() {
 	function logError(err) {
 		console.error('UMM SOMETHING BROKE: ', err)
 	}
+	var todoId = 0
 	this.getTodos = function (draw) {
 		$.get(baseUrl)
 			.then(function (res) {
@@ -33,7 +34,9 @@ function TodoService() {
 			method: 'DELETE',
 			url: baseUrl + '/' + index,
 		})
-			.then(getTodos)
+			.then(function (res){
+		})
 			.fail(logError)
+			getTodos()
 	}
 }

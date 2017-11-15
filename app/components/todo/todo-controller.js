@@ -13,7 +13,7 @@ function TodoController() {
 			<div class="panel panel-info">
 			<div class="panel-heading">
 			<h3>${i + 1}. ${todo.todo}
-			<button type="submit" onclick="app.components.todo-controller.removeTodo(${i})" class="btn btn-default">Remove</button>
+			<button onclick="app.controllers.todoCtrl.removeTodo(${i})" class="btn btn-default">Remove</button>
 			</h3>
 			</div>
 			</div>
@@ -21,9 +21,9 @@ function TodoController() {
 			`
 		}
 		formElem.innerHTML = template
+		console.log(template)
 	}
 	this.addTodoFromForm = function addTodoFromForm(e) {
-		debugger
 		e.preventDefault()
 		var form = e.target.newItem.value
 		var todo = {
