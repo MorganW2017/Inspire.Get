@@ -11,20 +11,24 @@ function TodoController() {
 			template += `
 			<div class="col-md-3">
 			<div class="panel panel-info">
-				<div class="panel-heading">
-					<h3>${i + 1}. ${todo.todo}
-						<button type="submit" onclick="app.components.todo-controller.removeTodo(${i})" class="btn btn-default">Remove</button>
-					</h3>
-				</div>
+			<div class="panel-heading">
+			<h3>${i + 1}. ${todo.todo}
+			<button type="submit" onclick="app.components.todo-controller.removeTodo(${i})" class="btn btn-default">Remove</button>
+			</h3>
 			</div>
-		</div>
+			</div>
+			</div>
 			`
 		}
 		formElem.innerHTML = template
-		this.addTodoFromForm = function addTodoFromForm(e) {
-			e.preventDefault()
-			var form = e.target
+	}
+	this.addTodoFromForm = function addTodoFromForm(e) {
+		e.preventDefault()
+		var todo = {
+			completed: false,
+			todo: form
 		}
+		var form = e.target
 		todoService.addTodo(todo, getTodos)
 	}
 	this.toggleTodoStatus = function (todoId) {
