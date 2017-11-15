@@ -3,7 +3,6 @@ function TodoService() {
 	function logError(err) {
 		console.error('UMM SOMETHING BROKE: ', err)
 	}
-	var id = 0
 	this.getTodos = function (draw) {
 		$.get(baseUrl)
 			.then(function (res) {
@@ -23,7 +22,7 @@ function TodoService() {
 			method: 'PUT',
 			contentType: 'application/json',
 			url: baseUrl + '/' + todoId,
-			data: JSON.stringify(0)
+			data: JSON.stringify(todos)
 		})
 			.then(function (res) {
 			})

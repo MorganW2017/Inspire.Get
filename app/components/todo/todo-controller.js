@@ -23,12 +23,13 @@ function TodoController() {
 		formElem.innerHTML = template
 	}
 	this.addTodoFromForm = function addTodoFromForm(e) {
+		debugger
 		e.preventDefault()
+		var form = e.target.newItem.value
 		var todo = {
 			completed: false,
 			todo: form
 		}
-		var form = e.target
 		todoService.addTodo(todo, getTodos)
 	}
 	this.toggleTodoStatus = function (todoId) {
