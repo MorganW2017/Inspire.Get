@@ -17,7 +17,7 @@ function TodoService() {
 			.then(function (res) {
 			})
 			.fail(logError)
-			getTodos()			
+		getTodos()
 	}
 	this.toggleTodoStatus = function (todoId) {
 		$.ajax({
@@ -35,9 +35,9 @@ function TodoService() {
 			method: 'DELETE',
 			url: baseUrl + '/' + index,
 		})
-			.then(function (res){
-		})
+			.then(function (res) {
+				getTodos()
+			})
 			.fail(logError)
-			getTodos()
 	}
 }
