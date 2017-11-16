@@ -21,7 +21,6 @@ function TodoController() {
 			`
 		}
 		formElem.innerHTML = template
-		console.log(template)
 	}
 	this.addTodoFromForm = function addTodoFromForm(e) {
 		e.preventDefault()

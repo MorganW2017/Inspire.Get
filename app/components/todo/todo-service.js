@@ -17,6 +17,7 @@ function TodoService() {
 			.then(function (res) {
 			})
 			.fail(logError)
+			getTodos()			
 	}
 	this.toggleTodoStatus = function (todoId) {
 		$.ajax({
